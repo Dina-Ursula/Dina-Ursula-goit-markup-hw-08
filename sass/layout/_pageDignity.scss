@@ -1,0 +1,68 @@
+.excellence {
+  background-color: var(--clear-white);
+
+  &__item:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 120px;
+    margin-bottom: 30px;
+    border-radius: 4px;
+
+    background-color: var(--excellence-bg);
+  }
+
+  &__icon {
+    max-width: 70px;
+    height: 70px;
+  }
+
+  &__name {
+    @include font(14px, 700, 16px);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    margin-bottom: 10px;
+
+    @media screen and (max-width: 767px) {
+      text-align: center;
+    }
+  }
+
+  &__description {
+    @include font(14px, 400, 24px);
+    letter-spacing: 0.03em;
+    color: var(--description-text);
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .excellence__scroll {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+
+  .excellence__item {
+    margin: 15px;
+
+    width: calc((100% - 60px) / 2);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .excellence__scroll {
+    display: flex;
+  }
+
+  .excellence__item:not(:last-child) {
+    margin-right: 30px;
+  }
+}

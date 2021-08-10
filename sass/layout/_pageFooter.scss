@@ -1,0 +1,88 @@
+.footer {
+  background-color: var(--hero-color);
+}
+
+.first-box {
+  text-align: center;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
+}
+
+.town-adress {
+  margin-bottom: 8px;
+
+  font-style: normal;
+  @include font(14px, 400, 24px);
+  letter-spacing: 0.03em;
+
+  color: var(--clear-white);
+}
+
+.contact__item {
+  @include font(14px, 400, 24px);
+  letter-spacing: 0.03em;
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
+}
+
+.contact__link {
+  display: inline-block;
+
+  color: rgba(255, 255, 255, 0.6);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.joinUs__head {
+  margin-bottom: 20px;
+
+  @include font(14px, 700, 17px);
+  text-align: center;
+  text-transform: uppercase;
+
+  color: var(--clear-white);
+}
+
+@media screen and (min-width: 768px) {
+  @media screen and (max-width: 1199px) {
+    .footer__wrapper {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-around;
+
+      margin-bottom: 60px;
+    }
+  }
+
+  .first-box {
+    width: 232px;
+  }
+
+  .joinUs {
+    width: 206px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__wrapper {
+    display: flex;
+    align-items: baseline;
+  }
+  .first-box {
+    width: 232px;
+    margin-right: 70px;
+    text-align: start;
+  }
+
+  .joinUs {
+    width: 206px;
+  }
+  .joinUs__head {
+    text-align: start;
+  }
+}
